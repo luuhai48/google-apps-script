@@ -11,8 +11,8 @@ function doGet(e) {
  */
 function doPost(e) {
     if(typeof e !== 'undefined') {
-        var parms = e.parameter;
-        if (!parms.email || !parms.subject || !parms.body)
+        var params = e.parameter;
+        if (!params.email || !params.subject || !params.body)
             return ContentService.createTextOutput(JSON.stringify({message: "Failed! Not Enough Args"}));
         
         try {
